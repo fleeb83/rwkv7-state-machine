@@ -26,7 +26,7 @@ This review has been internal. It is useful, but it is not independent external 
 
 ## Keep the failure record
 
-Failed, null and corrected attempts are recorded in a permanent project log. As of this write up, it contains 129 entries across the wider project history. Some are failed approaches. Some are evaluation problems caught before they produced a misleading claim. Some are regressions that showed a good looking direction was not reliable.
+Failed, null and corrected attempts are recorded in a permanent project log. Some are failed approaches. Some are evaluation problems caught before they produced a misleading claim. Some are regressions that showed a good looking direction was not reliable. Recent unsuccessful program-repair tests are retained alongside successful execution and readout results.
 
 The record is there to avoid repeating work blindly and to make the public account more honest. It does not mean the project is free of mistakes.
 

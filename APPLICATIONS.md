@@ -45,6 +45,8 @@ The value is not a claim that the model has general reasoning. It is the ability
 
 The applications below depend on a reliable path from a real situation into the machine, through its internal process and back out as a valid action or answer. Narrow controlled chains have worked. The full chain has not been shown on open ended real world tasks.
 
+As of 5 September 2026, this includes a repeated simulated-environment loop and, separately, a held out language-to-program-to-execution chain with computed-result readout. These strengthen the case for further testing. They do not yet establish reliable program correction or any of the broader applications below.
+
 ### A different route to checking neural systems
 
 Formally verifying the behaviour of a whole language model is far beyond what this project claims. A smaller and more realistic target may be to split the problem into two checks.

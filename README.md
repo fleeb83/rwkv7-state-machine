@@ -2,11 +2,17 @@
 
 Independent experimental work by Russell Thomas, Australia.
 
+[russthomas.dev](https://russthomas.dev)
+
+Public summary updated 5 September 2026.
+
 I started with a simple question. Can the internal state of a frozen language model (RWKV7 G1G) carry and run a real program?
 
 After months of controlled tests, the answer inside the project is yes. The base model is RWKV7 G1G, an open recurrent architecture, tested at two scales: 0.4B and 7.2B parameters. The base model stays frozen at both scales. Small trained support parts help move information, but one candidate check found they could not perform the whole operation alone.
 
 This has not been independently reproduced. It is not a finished system.
+
+The upstream RWKV architecture and base models are credited to BlinkDL and the respective RWKV contributors. See [Upstream credits](UPSTREAM.md) for their GitHub and Hugging Face links and the distinction from this independent work.
 
 ## Why it matters
 
@@ -36,6 +42,8 @@ These are results accepted inside the project, not claims of outside proof. Each
 - Choosing a subgoal and first action from internal memory, with tests showing that the relevant memory is genuinely being used.
 - Rule learning from examples, including a held out evaluation and checks against simple shortcuts.
 - Translation from plain English program descriptions into executable machine instructions, including straight line programs, decisions and loops.
+- A connected language-to-program-to-execution test at 7.2B, with the model reading back the computed result on the same held out problem set.
+- A controlled environment loop that reads the changed situation again after each action.
 
 The core result has also been checked on both the 0.4B and 7.2B model versions. That is encouraging, but it is not evidence of a general scaling law.
 
@@ -53,7 +61,8 @@ This is the important part.
 
 - Some capabilities have worked together in narrow controlled tests. That is not the same as a complete system working on a new real world problem.
 - Reading a broad external situation into the machine, and returning a dependable answer or action, are still the weakest areas.
-- The previous free text route for actions did not work reliably. A more structured route has worked in narrow tests, but it does not yet support a broad claim.
+- The previous free text route for actions did not work reliably. Structured actions and a narrow computed-result readout have now passed controlled tests; dependable open ended output remains unshown.
+- Reading back a computed result has not yet led to reliable correction of a wrong program from execution feedback.
 - There has been no outside replication or peer reviewed publication.
 - This work does not show that language models do any of this by themselves in normal use. It shows what their frozen internal state can be made to carry in a specific engineered setup.
 
@@ -78,7 +87,7 @@ This lets a funder stop if the evidence does not hold up. If it does, the next d
 
 ## How the work is checked
 
-Before a result is accepted, the test, pass conditions and held out evaluation are set in advance. Each claim must also fail in deliberately broken versions of the setup. Failed, null and corrected attempts are kept in the project record rather than discarded. That record currently contains 129 such outcomes across the wider project history.
+Before a result is accepted, the test, pass conditions and held out evaluation are set in advance. Each claim must also fail in deliberately broken versions of the setup. Failed, null and corrected attempts are kept in the project record rather than discarded, including recent unsuccessful attempts to correct programs using execution feedback.
 
 This does not make the work beyond question. It is intended to make the claims easier to question properly.
 
@@ -111,6 +120,8 @@ The aim is simple. Let serious reviewers test the claims properly without puttin
 Russell Thomas, Australia.
 
 Open to modest funding, compute sponsorship, collaboration and careful technical review.  
+[russthomas.dev](https://russthomas.dev)
+
 `russellt83@gmail.com`
 
 ---

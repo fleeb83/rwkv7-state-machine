@@ -12,9 +12,15 @@ There is still no demonstrated system that takes a genuinely new and messy real 
 
 Getting information from the outside world into the machine, and getting an action reliably back out, are the thinnest parts of the project.
 
-A narrow text reader has worked for simple outcome signals, but broader input remains thin. The earlier action approach, using ordinary free text generation, repeatedly produced descriptions of an action rather than an executable action. That approach failed.
+A narrow reader has worked in a repeated simulated-environment loop. A separate prediction test transferred to unseen states, but with a substantial drop from performance on training states. Broader input remains thin. The earlier action approach, using ordinary free text generation, repeatedly produced descriptions of an action rather than an executable action. That approach failed.
 
-A more structured action path has worked in narrow controlled tests. It does not yet provide a dependable general route from ordinary language to real world action. This is where extra compute, technical review and collaboration would be most useful.
+A more structured action path has worked in narrow controlled tests. A separate language-to-execution chain now includes correct readout of a bounded computed value. These do not yet provide a dependable general route from ordinary language to real world action. This is where extra compute, technical review and collaboration would be most useful.
+
+## Correct execution does not guarantee a correct program
+
+The latest language-to-execution test produced the required result on 502 of 520 held out descriptions. Seven outputs were not runnable and eleven runnable programs computed the wrong result, even though execution matched the reference. The readout faithfully reported the computed values, including wrong answers.
+
+Attempts to correct programs using execution feedback have not passed the tested evaluations. Reliable self-correction, live search and transfer beyond the tested problem family remain unshown. The successful environment loop and language-to-result chain are separate experiments; their capabilities should not be combined into a broader claim.
 
 ## Scale is limited
 
