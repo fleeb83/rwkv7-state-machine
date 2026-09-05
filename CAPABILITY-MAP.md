@@ -1,6 +1,6 @@
 # Capability map
 
-This is the honest high level picture of the project. It is not a scorecard and it does not show every experiment. It shows where evidence is strongest and where the work is still thin.
+This page summarises the current evidence by capability. Status refers to internal project evaluations; results have not been independently reproduced.
 
 | Area | Current position |
 |---|---|
@@ -25,6 +25,6 @@ This is the honest high level picture of the project. It is not a scorecard and 
 
 The project has more evidence for the internal machine than for its connection to the outside world. As of 5 September 2026, both a repeated environment loop and a language-to-result chain have passed narrow tests. They are separate results, not one combined general system. Broader input, dependable open ended output and program correction remain open.
 
-The strongest next use of additional support is therefore not another isolated internal capability. It is the work needed to connect the tested pieces to a real task, test them together and find out whether they hold up.
+The next research priority is to evaluate the tested components together on broader tasks, with particular attention to input grounding, output reliability and error correction.
 
 The map deliberately separates accepted results from early work and open gaps. See [RESULTS.md](RESULTS.md) for the result summaries and [LIMITATIONS.md](LIMITATIONS.md) for the limits that apply to all of them.

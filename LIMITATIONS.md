@@ -1,20 +1,16 @@
 # Limitations
 
-Please read this alongside [RESULTS.md](RESULTS.md). Each result should only be read within the limits of its test. The gaps are just as important.
+Each result in [Results](RESULTS.md) applies to its stated evaluation conditions. The following limits remain unresolved.
 
-## No open ended system yet
+## No open ended system demonstrated
 
-The project has accepted individual capabilities under controlled conditions. Some of them have also worked together in narrow end to end tests.
+Individual capabilities and some narrow combinations have passed controlled evaluations. No system has been demonstrated that takes a new, open ended real world task and returns a dependable answer or action.
 
-There is still no demonstrated system that takes a genuinely new and messy real world task, works through it and returns a dependable answer or action. A narrow controlled chain is not the same as a general working system.
+## Input and output interfaces
 
-## Interfaces are the main open problem
+A narrow reader has worked in a repeated simulated-environment loop. A separate prediction test transferred to unseen states, with a substantial drop from performance on training states. Broader input grounding and transfer remain unestablished.
 
-Getting information from the outside world into the machine, and getting an action reliably back out, are the thinnest parts of the project.
-
-A narrow reader has worked in a repeated simulated-environment loop. A separate prediction test transferred to unseen states, but with a substantial drop from performance on training states. Broader input remains thin. The earlier action approach, using ordinary free text generation, repeatedly produced descriptions of an action rather than an executable action. That approach failed.
-
-A more structured action path has worked in narrow controlled tests. A separate language-to-execution chain now includes correct readout of a bounded computed value. These do not yet provide a dependable general route from ordinary language to real world action. This is where extra compute, technical review and collaboration would be most useful.
+The earlier action approach used free text generation and repeatedly produced descriptions of actions rather than executable actions. A structured action path has since passed narrow controlled tests. A separate language-to-execution chain also includes correct readout of a bounded computed value. These results do not establish a dependable general route from ordinary language to real world action.
 
 ## Correct execution does not guarantee a correct program
 
@@ -22,35 +18,26 @@ The latest language-to-execution test produced the required result on 502 of 520
 
 Attempts to correct programs using execution feedback have not passed the tested evaluations. Reliable self-correction, live search and transfer beyond the tested problem family remain unshown. The successful environment loop and language-to-result chain are separate experiments; their capabilities should not be combined into a broader claim.
 
-## Scale is limited
+## Limited scale evidence
 
-The work has been done on personal consumer hardware with occasional self funded cloud runs. The largest tests that passed inside the project are on the 7.2B RWKV7 G1G production model. That is a useful check, not proof that the approach will work unchanged at much larger scales.
+Experiments have been conducted at 0.4B and 7.2B parameters. The largest tests that passed the project evaluations use RWKV7 G1G at 7.2B. Results at these sizes do not establish a scaling law or show that the approach will work unchanged at larger scales.
 
-More resources would allow stronger testing at scale, more parallel variants, and better checks of where the approach breaks.
+Some capacity boundaries passed separate tests and have not all been combined in one maximum configuration.
 
-## The split of work is not fully settled
+## Unresolved division of computation
 
-One candidate test found that the trained support part and the frozen model were both needed. Neither produced the tested behaviour alone. That is useful evidence against the support part doing everything by itself.
+One candidate test found that trained support and the frozen model were both needed for the tested behaviour. Disabling support or disrupting the frozen model's learned structure reduced performance to chance. This supports dependence on both components within that test, but does not establish the exact division of computation.
 
-The test was limited to the 0.4B model and a narrow internal task. It did not cover full program execution or compare the system with a simpler matched model. Those checks are still needed before making a broad claim about where the computation lives.
+The test was limited to the 0.4B model and a narrow internal task. It did not cover full program execution or compare the system with a simpler matched model. Those checks are needed before making broader claims about where the computation occurs.
 
-## No independent replication yet
+## No independent replication
 
-This repository is the first public account of the project. The results have not been peer reviewed or independently replicated. The review process described in [METHODOLOGY.md](METHODOLOGY.md) has been internal.
+The results have not been peer reviewed or independently replicated. The review process described in [Methodology](METHODOLOGY.md) has been internal. Public summaries do not provide the underlying materials needed for independent verification; confidential review arrangements are described in the [README](README.md#access-and-review).
 
-That is a real limit on the confidence an outsider should place in the work. Careful external technical review would be valuable, not ceremonial.
+## Engineered behaviour
 
-## This is not how models work naturally
+The project studies what a frozen model's state can be made to carry in a specific engineered setup. It does not show that ordinary language models spontaneously perform this kind of internal computation.
 
-The project does not show that ordinary language models spontaneously run this kind of internal computation. It shows what a frozen model's state can be made to carry in a specific engineered setup.
+## Further validation
 
-## What would change the picture
-
-The next stage is clear.
-
-- build reliable input and action interfaces
-- test the pieces that passed together on a genuine task
-- check the approach at larger scale
-- seek independent scrutiny and replication
-
-Those are not side projects. They are the tests needed to find out whether the current results lead to something more complete.
+The main outstanding tests are broader input and action interfaces, integration on a new task, comparisons with simpler systems, scale checks and independent reproduction. These are necessary to assess whether the controlled results extend beyond the current evaluations.

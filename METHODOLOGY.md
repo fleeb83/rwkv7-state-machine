@@ -1,22 +1,22 @@
 # Methodology
 
-I am not presenting this as academic research or as a substitute for outside replication. It is independent experimental work. The standard I have tried to follow is simple. Make the test clear before running it, try to break the result and keep the failures.
+This independent experimental work uses predefined evaluations, negative controls and a retained record of failures and corrections. Review has been internal; independent replication remains outstanding.
 
 This document describes the checking process at a high level. It does not publish code, prompts, training material, configuration or other implementation detail.
 
 ## Set the test before the result
 
-Before a result can be accepted, I record what is being tested, what would count as a pass or failure and what held out cases will be used. This is meant to reduce the temptation to run many versions and only describe the one that happened to work.
+Before a result can be accepted, the claim, pass and failure conditions, and held out evaluation are recorded. This limits selective reporting of successful runs.
 
 ## Try to break it
 
 Each claim is tested against deliberately broken versions of the setup. Depending on the result, this can include disabling the component being tested, corrupting the relevant internal state, or breaking the relationship between the training inputs and outputs.
 
-If a broken version still passes, the claim stops there. A good headline number is not enough if the control suggests the system found a shortcut.
+If a negative control passes, the result does not establish the intended claim, even if the main evaluation score meets its threshold.
 
 ## Check held out cases make sense
 
-A held out test only helps if the task can actually be represented by the system being tested. In this project, planned tests have been deferred after direct checks showed they did not fit the current setup. I would rather record that limit than make the result look broader than it is.
+A held out test must be representable by the system being evaluated. Planned tests have been deferred when direct checks showed they did not fit the current setup. These remain open questions rather than evidence of generalisation.
 
 ## Review the result, not just the average
 
@@ -28,18 +28,16 @@ This review has been internal. It is useful, but it is not independent external 
 
 Failed, null and corrected attempts are recorded in a permanent project log. Some are failed approaches. Some are evaluation problems caught before they produced a misleading claim. Some are regressions that showed a good looking direction was not reliable. Recent unsuccessful program-repair tests are retained alongside successful execution and readout results.
 
-The record is there to avoid repeating work blindly and to make the public account more honest. It does not mean the project is free of mistakes.
+The record supports traceability and helps prevent repeated failed approaches. It does not replace validation of individual claims.
 
 ## Keep scope tight
 
 A result at one scale is not treated as a result at another until it is checked there. A result in one evaluation setting is not treated as proof in a different setting. Every public claim should say what it does not show as clearly as what it does.
 
-## Improve the process when it fails
+## Record integrity
 
-The project record keeping process has been changed when it was not doing its job. A heavier tracking layer was removed after it added work without improving trust. The underlying log later needed repair after a problem damaged some records. That work cost time, but it was necessary before later results could be trusted and checked properly.
-
-The point is not that process is automatically good. The point is that it should be tested as well. If it is not helping, it should be fixed or removed.
+The project log has required repairs after record integrity problems. Corrections and retractions are retained, and current summaries must account for them rather than treating every historical entry as an active claim.
 
 ## What this methodology does not prove
 
-It does not prove the results are correct. It does not replace independent replication, peer review or outside technical criticism. It is a practical attempt to make the work easier to test, inspect and challenge while those things are still missing.
+These procedures support inspection and challenge of the reported results. They do not establish correctness or replace independent replication, peer review or external technical scrutiny.

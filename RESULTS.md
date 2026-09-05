@@ -6,14 +6,13 @@ Updated 5 September 2026 from the current project record. New entries report out
 
 ## What accepted means here
 
-An accepted result has passed the project's preset evaluation and the relevant negative controls. It has been accepted inside the project. It has not been independently reproduced unless clearly stated. It is not accepted just because it looks good, and it is not treated as proof of anything broader than the test supports. See [METHODOLOGY.md](METHODOLOGY.md).
+An accepted result has passed the project's preset evaluation and relevant negative controls. Acceptance is internal and applies only within the stated test scope; it does not imply independent reproduction. See [METHODOLOGY.md](METHODOLOGY.md).
 
-All results below are on RWKV7 G1G, at either the 0.4B development scale or the 7.2B production scale; each
-result states which.
+The experiments use RWKV7 G1G at 0.4B and 7.2B parameters. Scale-specific results are identified where reported; evidence at one scale does not establish a result at the other.
 
 ## Public evidence snapshot
 
-This table gives a small amount of checkable context without publishing the private method. Accepted means accepted inside the project, not confirmed by someone outside it.
+The table summarises selected evaluations without disclosing unpublished methods. Status refers to internal project review.
 
 | Claim | Public test size | Public result | Status | Main limit |
 |---|---|---|---|---|
@@ -112,7 +111,7 @@ Recent controlled attempts to use execution feedback to correct wrong programs d
 
 The project keeps failures, null outcomes and corrections in its permanent record. This includes failed design choices, invalid evaluation ideas and approaches that regressed previously working behaviour. Recent program-repair failures remain part of that record alongside the successful execution and readout tests.
 
-The point is practical. Record what did not work so it does not get rediscovered by accident. It is not a claim that the process prevents mistakes.
+The record supports traceability of unsuccessful approaches and subsequent corrections.
 
 For the wider project picture, see [CAPABILITY-MAP.md](CAPABILITY-MAP.md). For what these results may eventually enable, without presenting it as confirmed, see [APPLICATIONS.md](APPLICATIONS.md).
 
